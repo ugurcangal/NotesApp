@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/bac_color"
+    android:layout_height="match_parent"
+    tools:context=".ui.Fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter :"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bold"/>
+
+            <TextView
+                android:id="@+id/allNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALL"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_filter_shape"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/filterHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="H"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/red_color"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_filter_shape"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/filterMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="M"
+                android:fontFamily="@font/bold"
+                android:textColor="@color/yellow_color"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/btn_filter_shape"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="16sp"/>
+            <TextView
+                android:id="@+id/filterLow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L"
+                android:fontFamily="@font/bold"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/green_color"
+                android:background="@drawable/btn_filter_shape"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="16sp"/>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvAllNotes"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnAddNotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:backgroundTint="@color/red_color"
+            android:src="@drawable/ic_baseline_add_24"
+            app:backgroundTint="@color/red_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+
